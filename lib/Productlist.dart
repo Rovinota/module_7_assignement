@@ -69,8 +69,9 @@ class _ProductlistState extends State<Productlist> {
                   ),
                   GestureDetector(
                       onTap: () {
+                        if (productCount[index] == 0)total_buy = total_buy + 1;
                         productCount[index] = productCount[index] + 1;
-                        total_buy = total_buy + 1;
+
                         if (productCount[index] == 5) {
                           showDialog(
                               barrierDismissible: false,
